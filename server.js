@@ -27,7 +27,7 @@ const userslist = {
   a: {
     id: 'a',
     nickname: 'ivy',        
-    avatar: "https://www.laravelnigeria.com/img/chris.jpg"
+    avatar: './Me.jpg',
   },
 };
 
@@ -35,25 +35,28 @@ const postslist = {
   a: {
     a: {
       id: 'a',
-      user: userslist.a,
+      user: userslist['a'],
       caption: 'hello world!',
+      image:
+        './espace-room.jpg'
     },
     b: {
       id: 'b',
-      user: userslist.a,
-      caption: 'Angular Book :)',
+      user: userslist['a'],
+      caption: 'First :)',
       image:
-        'https://cdn-images-1.medium.com/max/1000/1*ltLfTw87lE-Dqt-BKNdj1A.jpeg'
+        './espace-room.jpg'
     },
     c: {
       id: 'c',
-      user: userslist.a,
-      caption: 'Me at Frontstack.io',
-      image: 'https://pbs.twimg.com/media/DNNhrp6W0AAbk7Y.jpg:large'
+      user: userslist['a'],
+      caption: 'Second',
+      image: './espace-room.jpg'
     },
   }
 };
 
+// The root provides a resolver function for each API endpoint
 const root = {
   user({ id }) {
     return userslist[id];
